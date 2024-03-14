@@ -9,7 +9,6 @@ import {getAuth,
     onAuthStateChanged
 } from "firebase/auth";
 import {getFirestore, doc, setDoc,getDoc, collection, writeBatch, getDocs, query} from "firebase/firestore"
-import async from "async";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -24,6 +23,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
+console.log(firebaseApp);
 
 const googleProvider = new GoogleAuthProvider();
 googleProvider.setCustomParameters({
